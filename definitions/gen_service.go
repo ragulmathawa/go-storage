@@ -3,12 +3,13 @@ package definitions
 import (
 	"bytes"
 	"fmt"
-	"github.com/Xuanwo/gg"
-	"github.com/Xuanwo/templateutils"
-	log "github.com/sirupsen/logrus"
 	"os"
 	"path/filepath"
 	"strings"
+
+	"github.com/Xuanwo/gg"
+	"github.com/Xuanwo/templateutils"
+	log "github.com/sirupsen/logrus"
 )
 
 type genService struct {
@@ -108,8 +109,8 @@ func (gs *genService) generateHeader() {
 		AddPath("time").
 		AddPath("errors").
 		AddLine().
-		AddPath("github.com/beyondstorage/go-storage/v5/services").
-		AddPath("github.com/beyondstorage/go-storage/v5/types")
+		AddPath("github.com/ragulmathawa/go-storage/services").
+		AddPath("github.com/ragulmathawa/go-storage/types")
 
 	f.NewVar().
 		AddDecl("_", "types.Storager").

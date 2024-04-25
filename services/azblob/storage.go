@@ -10,10 +10,10 @@ import (
 
 	"github.com/Azure/azure-storage-blob-go/azblob"
 
-	ps "github.com/beyondstorage/go-storage/v5/pairs"
-	"github.com/beyondstorage/go-storage/v5/pkg/iowrap"
-	"github.com/beyondstorage/go-storage/v5/services"
-	"github.com/beyondstorage/go-storage/v5/types"
+	ps "github.com/ragulmathawa/go-storage/pairs"
+	"github.com/ragulmathawa/go-storage/pkg/iowrap"
+	"github.com/ragulmathawa/go-storage/services"
+	"github.com/ragulmathawa/go-storage/types"
 )
 
 func (s *Storage) commitAppend(ctx context.Context, o *types.Object, opt pairStorageCommitAppend) (err error) {

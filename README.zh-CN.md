@@ -27,8 +27,8 @@ package main
 import (
     "log"
 
-    "github.com/beyondstorage/go-storage/v5/services"
-    "github.com/beyondstorage/go-storage/v5/types"
+    "github.com/ragulmathawa/go-storage/services"
+    "github.com/ragulmathawa/go-storage/types"
 
     // 添加 fs 支持
     _ "github.com/beyondstorage/go-storage/services/fs/v4"
@@ -77,67 +77,98 @@ func main() {
 }
 ```
 
-更多示例可以在 [go-storage-example](https://github.com/beyondstorage/go-storage-example) 找到。
+更多示例可以在
+[go-storage-example](https://github.com/beyondstorage/go-storage-example) 找到。
 
 ## 特点
 
 ### 支持多种本地服务
 
-目前已经有 **16** 个稳定的服务通过了所有的 [集成测试](https://github.com/beyondstorage/go-integration-test)。
+目前已经有 **16** 个稳定的服务通过了所有的
+[集成测试](https://github.com/beyondstorage/go-integration-test)。
 
-- [azblob](https://github.com/beyondstorage/go-service-azblob/): [Azure Blob storage](https://docs.microsoft.com/en-us/azure/storage/blobs/)
-- [bos](https://github.com/beyondstorage/go-service-bos): [Baidu Object Storage](https://cloud.baidu.com/product/bos.html)
-- [cos](https://github.com/beyondstorage/go-service-cos/): [Tencent Cloud Object Storage](https://cloud.tencent.com/product/cos)
-- [dropbox](https://github.com/beyondstorage/go-service-dropbox/): [Dropbox](https://www.dropbox.com)
+- [azblob](https://github.com/beyondstorage/go-service-azblob/):
+  [Azure Blob storage](https://docs.microsoft.com/en-us/azure/storage/blobs/)
+- [bos](https://github.com/beyondstorage/go-service-bos):
+  [Baidu Object Storage](https://cloud.baidu.com/product/bos.html)
+- [cos](https://github.com/beyondstorage/go-service-cos/):
+  [Tencent Cloud Object Storage](https://cloud.tencent.com/product/cos)
+- [dropbox](https://github.com/beyondstorage/go-service-dropbox/):
+  [Dropbox](https://www.dropbox.com)
 - [fs](https://github.com/beyondstorage/go-service-fs/): Local file system
 - [ftp](https://github.com/beyondstorage/go-service-ftp/): FTP
-- [gcs](https://github.com/beyondstorage/go-service-gcs/): [Google Cloud Storage](https://cloud.google.com/storage/)
-- [gdrive](https://github.com/beyondstorage/go-service-gdrive): [Google Drive](https://www.google.com/drive/)
-- [ipfs](https://github.com/beyondstorage/go-service-ipfs): [InterPlanetary File System](https://ipfs.io)
-- [kodo](https://github.com/beyondstorage/go-service-kodo/): [qiniu kodo](https://www.qiniu.com/products/kodo)
-- [memory](https://github.com/beyondstorage/go-service-memory): data that only in memory
-- [minio](https://github.com/beyondstorage/go-service-minio): [MinIO](https://min.io)
-- [obs](https://github.com/beyondstorage/go-service-obs): [Huawei Object Storage Service](https://www.huaweicloud.com/product/obs.html)
-- [oss](https://github.com/beyondstorage/go-service-oss/): [Aliyun Object Storage](https://www.aliyun.com/product/oss)
-- [qingstor](https://github.com/beyondstorage/go-service-qingstor/): [QingStor Object Storage](https://www.qingcloud.com/products/qingstor/)
-- [s3](https://github.com/beyondstorage/go-service-s3/): [Amazon S3](https://aws.amazon.com/s3/)
+- [gcs](https://github.com/beyondstorage/go-service-gcs/):
+  [Google Cloud Storage](https://cloud.google.com/storage/)
+- [gdrive](https://github.com/beyondstorage/go-service-gdrive):
+  [Google Drive](https://www.google.com/drive/)
+- [ipfs](https://github.com/beyondstorage/go-service-ipfs):
+  [InterPlanetary File System](https://ipfs.io)
+- [kodo](https://github.com/beyondstorage/go-service-kodo/):
+  [qiniu kodo](https://www.qiniu.com/products/kodo)
+- [memory](https://github.com/beyondstorage/go-service-memory): data that only
+  in memory
+- [minio](https://github.com/beyondstorage/go-service-minio):
+  [MinIO](https://min.io)
+- [obs](https://github.com/beyondstorage/go-service-obs):
+  [Huawei Object Storage Service](https://www.huaweicloud.com/product/obs.html)
+- [oss](https://github.com/beyondstorage/go-service-oss/):
+  [Aliyun Object Storage](https://www.aliyun.com/product/oss)
+- [qingstor](https://github.com/beyondstorage/go-service-qingstor/):
+  [QingStor Object Storage](https://www.qingcloud.com/products/qingstor/)
+- [s3](https://github.com/beyondstorage/go-service-s3/):
+  [Amazon S3](https://aws.amazon.com/s3/)
 
-另有 **3** 个公测版本的服务已实现了所需功能，但还没有通过 [集成测试](https://github.com/beyondstorage/go-integration-test)。
+另有 **3** 个公测版本的服务已实现了所需功能，但还没有通过
+[集成测试](https://github.com/beyondstorage/go-integration-test)。
 
-- [hdfs](https://github.com/beyondstorage/go-service-hdfs): [Hadoop Distributed File System](https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html#Introduction)
+- [hdfs](https://github.com/beyondstorage/go-service-hdfs):
+  [Hadoop Distributed File System](https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html#Introduction)
 - [tar](https://github.com/beyondstorage/go-service-tar): tar files
-- [uss](https://github.com/beyondstorage/go-service-uss/): [UPYUN Storage Service](https://www.upyun.com/products/file-storage)
+- [uss](https://github.com/beyondstorage/go-service-uss/):
+  [UPYUN Storage Service](https://www.upyun.com/products/file-storage)
 
 最后还有 **4** 个处于内测阶段的服务仍在开发中。
 
-- [onedrive](https://github.com/beyondstorage/go-service-onedrive): [Microsoft OneDrive](https://www.microsoft.com/en-ww/microsoft-365/onedrive/online-cloud-storage)
-- [storj](https://github.com/beyondstorage/go-service-storj): [StorJ](https://www.storj.io/)
-- [webdav](https://github.com/beyondstorage/go-service-webdav): [WebDAV](http://www.webdav.org/)
+- [onedrive](https://github.com/beyondstorage/go-service-onedrive):
+  [Microsoft OneDrive](https://www.microsoft.com/en-ww/microsoft-365/onedrive/online-cloud-storage)
+- [storj](https://github.com/beyondstorage/go-service-storj):
+  [StorJ](https://www.storj.io/)
+- [webdav](https://github.com/beyondstorage/go-service-webdav):
+  [WebDAV](http://www.webdav.org/)
 - [zip](https://github.com/beyondstorage/go-service-zip): zip files
 
-更多关于服务的想法可以在 [Service Integration Tracking](https://github.com/beyondstorage/go-storage/issues/536) 找到。
+更多关于服务的想法可以在
+[Service Integration Tracking](https://github.com/beyondstorage/go-storage/issues/536)
+找到。
 
 ### 完整且易扩展的接口
 
 基本操作
 
-- 元数据: 获取 `storager` 元数据 
+- 元数据: 获取 `storager` 元数据
+
 ```go
 meta := store.Metadata()
 _ := meta.GetWorkDir() // 获取对象的工作目录
 _, ok := meta.GetWriteSizeMaximum() // 获取写操作的最大尺寸
 ```
+
 - 读取: 读取 `对象` 的内容
+
 ```go
 // 在偏移量 1024 处读取 2048 字节到 io.Writer
 n, err := store.Read("path", w, pairs.WithOffset(1024), pairs.WithSize(2048))
 ```
+
 - 写入: 将内容写入 `对象` 中
+
 ```go
 // 从 io.Reader 写入 2048 字节
 n, err := store.Write("path", r, 2048)
 ```
+
 - 统计: 获取 `对象` 元数据并检查是否存在
+
 ```go
 o, err := store.Stat("path")
 if errors.Is(err, services.ErrObjectNotExist) {
@@ -145,11 +176,15 @@ if errors.Is(err, services.ErrObjectNotExist) {
 }
 length, ok := o.GetContentLength() // 获取对象的内容长度
 ```
+
 - 删除: 删除一个 `对象`
+
 ```go
 err := store.Delete("path") // 删除对象 "路径"
 ```
-- 列表: 列出给定前缀或目录中的 `对象` 
+
+- 列表: 列出给定前缀或目录中的 `对象`
+
 ```go
 it, err := store.List("path")
 for {
@@ -164,18 +199,25 @@ for {
 扩展操作
 
 - 拷贝: 复制一个 `对象` 到 storager
+
 ```go
 err := store.(Copier).Copy(src, dst) // 从 src 复制一个对象到 dst
 ```
+
 - 移动: 移动一个 `对象` 到 storager
+
 ```go
 err := store.(Mover).Move(src, dst) // 从 src 移动一个对象到 dst
 ```
+
 - 链接: 为 `对象` 生成一个可访问的公共 url
+
 ```go
 url, err := store.(Reacher).Reach("path") // 生成一个对象的 url
 ```
+
 - 目录: `对象` 目录
+
 ```go
 o, err := store.(Direr).CreateDir("path") // 创建一个对象目录
 ```
@@ -183,6 +225,7 @@ o, err := store.(Direr).CreateDir("path") // 创建一个对象目录
 大文件操作
 
 - 分段: 允许进行分段上传
+
 ```go
 ms := store.(Multiparter)
 
@@ -193,7 +236,9 @@ n, part, err := ms.WriteMultipart(o, r, 1024, 1)
 // 完成分段对象创建
 err := ms.CompleteMultipart(o, []*Part{part})
 ```
+
 - 追加: 允许追加到一个对象上
+
 ```go
 as := store.(Appender)
 
@@ -204,7 +249,9 @@ n, err := as.WriteAppend(o, r, 1024)
 // 提交一个待追加的对象
 err = as.CommitAppend(o)
 ```
+
 - 块: 允许将一个对象与块 id 进行组合
+
 ```go
 bs := store.(Blocker)
 
@@ -215,7 +262,9 @@ n, err := bs.WriteBlock(o, r, 1024, "id-abc")
 // 通过块 id 组合区块
 err := bs.CombineBlock(o, []string{"id-abc"})
 ```
+
 - 页：允许进行随机写入
+
 ```go
 ps := store.(Pager)
 
@@ -231,11 +280,15 @@ n, err := ps.WritePage(o, r, 1024, 2048)
 
 - `id`: 服务中的唯一键
 - `name`: 服务工作目录的相对路径
-- `mode`: 对象的模式可以由以下几种进行组合：`read`, `dir`, `part` 以及 [更多](https://github.com/beyondstorage/go-storage/blob/master/types/object.go#L11) 
-- `etag`: 实体标签，定义于 [rfc2616](https://tools.ietf.org/html/rfc2616#section-14.19) 
+- `mode`: 对象的模式可以由以下几种进行组合：`read`, `dir`, `part` 以及
+  [更多](https://github.com/beyondstorage/go-storage/blob/master/types/object.go#L11)
+- `etag`: 实体标签，定义于
+  [rfc2616](https://tools.ietf.org/html/rfc2616#section-14.19)
 - `content-length`: 对象的内容大小
-- `content-md5`: [rfc2616](https://tools.ietf.org/html/rfc2616#section-14.15) 中定义的 Md5 简介
-- `content-type`: [rfc2616](https://tools.ietf.org/html/rfc2616#section-14.17) 中定义的媒体类型
+- `content-md5`: [rfc2616](https://tools.ietf.org/html/rfc2616#section-14.15)
+  中定义的 Md5 简介
+- `content-type`: [rfc2616](https://tools.ietf.org/html/rfc2616#section-14.17)
+  中定义的媒体类型
 - `last-modified`: 对象的最后更新时间
 
 系统对象元数据
@@ -253,7 +306,9 @@ _ = om.ServerSideEncryptionCustomerAlgorithm // 此对象的 sse 算法
 
 ### 强类型的接口
 
-自我维护的代码生成器 [定义](https://github.com/beyondstorage/go-storage/tree/master/cmd/definitions) 有助于生成我们所有的 API、pairs 和元数据。
+自我维护的代码生成器
+[定义](https://github.com/beyondstorage/go-storage/tree/master/cmd/definitions)
+有助于生成我们所有的 API、pairs 和元数据。
 
 生成的 pairs 可用作 API 的可选参数。
 
@@ -282,10 +337,12 @@ func (o *Object) GetContentMd5() (string, bool) {
 
 ### 服务器端加密
 
-支持通过 system pair 和 system metadata 指定在服务端对数据进行加密编码, 并且我们可以通过 [Default Pairs](https://beyondstorage.io/docs/go-storage/pairs/index#default-pairs) 来简化工作。
+支持通过 system pair 和 system metadata 指定在服务端对数据进行加密编码,
+并且我们可以通过
+[Default Pairs](https://beyondstorage.io/docs/go-storage/pairs/index#default-pairs)
+来简化工作。
 
 ```go
-
 func NewS3SseC(key []byte) (types.Storager, error) {
     defaultPairs := s3.DefaultStoragePairs{
         Write: []types.Pair{

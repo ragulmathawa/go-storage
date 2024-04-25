@@ -2,7 +2,8 @@ package main
 
 import (
 	"context"
-	"github.com/beyondstorage/go-storage/v5/types"
+
+	"github.com/ragulmathawa/go-storage/types"
 )
 
 type Service struct {

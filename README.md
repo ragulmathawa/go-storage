@@ -33,8 +33,8 @@ package main
 import (
     "log"
 
-    "github.com/beyondstorage/go-storage/v5/services"
-    "github.com/beyondstorage/go-storage/v5/types"
+    "github.com/ragulmathawa/go-storage/services"
+    "github.com/ragulmathawa/go-storage/types"
 
     // Add fs support
     _ "github.com/beyondstorage/go-storage/services/fs/v4"
@@ -83,67 +83,97 @@ func main() {
 }
 ```
 
-More examples could be found at [go-storage-example](https://github.com/beyondstorage/go-storage-example).
+More examples could be found at
+[go-storage-example](https://github.com/beyondstorage/go-storage-example).
 
 ## Features
 
 ### Widely native services support
 
-**16** stable services that have passed all [integration tests](https://github.com/beyondstorage/go-integration-test).
+**16** stable services that have passed all
+[integration tests](https://github.com/beyondstorage/go-integration-test).
 
-- [azblob](https://github.com/beyondstorage/go-service-azblob/): [Azure Blob storage](https://docs.microsoft.com/en-us/azure/storage/blobs/)
-- [bos](https://github.com/beyondstorage/go-service-bos): [Baidu Object Storage](https://cloud.baidu.com/product/bos.html)
-- [cos](https://github.com/beyondstorage/go-service-cos/): [Tencent Cloud Object Storage](https://cloud.tencent.com/product/cos)
-- [dropbox](https://github.com/beyondstorage/go-service-dropbox/): [Dropbox](https://www.dropbox.com)
+- [azblob](https://github.com/beyondstorage/go-service-azblob/):
+  [Azure Blob storage](https://docs.microsoft.com/en-us/azure/storage/blobs/)
+- [bos](https://github.com/beyondstorage/go-service-bos):
+  [Baidu Object Storage](https://cloud.baidu.com/product/bos.html)
+- [cos](https://github.com/beyondstorage/go-service-cos/):
+  [Tencent Cloud Object Storage](https://cloud.tencent.com/product/cos)
+- [dropbox](https://github.com/beyondstorage/go-service-dropbox/):
+  [Dropbox](https://www.dropbox.com)
 - [fs](https://github.com/beyondstorage/go-service-fs/): Local file system
 - [ftp](https://github.com/beyondstorage/go-service-ftp/): FTP
-- [gcs](https://github.com/beyondstorage/go-service-gcs/): [Google Cloud Storage](https://cloud.google.com/storage/)
-- [gdrive](https://github.com/beyondstorage/go-service-gdrive): [Google Drive](https://www.google.com/drive/)
-- [ipfs](https://github.com/beyondstorage/go-service-ipfs): [InterPlanetary File System](https://ipfs.io)
-- [kodo](https://github.com/beyondstorage/go-service-kodo/): [qiniu kodo](https://www.qiniu.com/products/kodo)
-- [memory](https://github.com/beyondstorage/go-service-memory): data that only in memory
-- [minio](https://github.com/beyondstorage/go-service-minio): [MinIO](https://min.io)
-- [obs](https://github.com/beyondstorage/go-service-obs): [Huawei Object Storage Service](https://www.huaweicloud.com/product/obs.html)
-- [oss](https://github.com/beyondstorage/go-service-oss/): [Aliyun Object Storage](https://www.aliyun.com/product/oss)
-- [qingstor](https://github.com/beyondstorage/go-service-qingstor/): [QingStor Object Storage](https://www.qingcloud.com/products/qingstor/)
-- [s3](https://github.com/beyondstorage/go-service-s3/): [Amazon S3](https://aws.amazon.com/s3/)
+- [gcs](https://github.com/beyondstorage/go-service-gcs/):
+  [Google Cloud Storage](https://cloud.google.com/storage/)
+- [gdrive](https://github.com/beyondstorage/go-service-gdrive):
+  [Google Drive](https://www.google.com/drive/)
+- [ipfs](https://github.com/beyondstorage/go-service-ipfs):
+  [InterPlanetary File System](https://ipfs.io)
+- [kodo](https://github.com/beyondstorage/go-service-kodo/):
+  [qiniu kodo](https://www.qiniu.com/products/kodo)
+- [memory](https://github.com/beyondstorage/go-service-memory): data that only
+  in memory
+- [minio](https://github.com/beyondstorage/go-service-minio):
+  [MinIO](https://min.io)
+- [obs](https://github.com/beyondstorage/go-service-obs):
+  [Huawei Object Storage Service](https://www.huaweicloud.com/product/obs.html)
+- [oss](https://github.com/beyondstorage/go-service-oss/):
+  [Aliyun Object Storage](https://www.aliyun.com/product/oss)
+- [qingstor](https://github.com/beyondstorage/go-service-qingstor/):
+  [QingStor Object Storage](https://www.qingcloud.com/products/qingstor/)
+- [s3](https://github.com/beyondstorage/go-service-s3/):
+  [Amazon S3](https://aws.amazon.com/s3/)
 
-**3** beta services that implemented required functions, but not passed [integration tests](https://github.com/beyondstorage/go-integration-test).
+**3** beta services that implemented required functions, but not passed
+[integration tests](https://github.com/beyondstorage/go-integration-test).
 
-- [hdfs](https://github.com/beyondstorage/go-service-hdfs): [Hadoop Distributed File System](https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html#Introduction)
+- [hdfs](https://github.com/beyondstorage/go-service-hdfs):
+  [Hadoop Distributed File System](https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html#Introduction)
 - [tar](https://github.com/beyondstorage/go-service-tar): tar files
-- [uss](https://github.com/beyondstorage/go-service-uss/): [UPYUN Storage Service](https://www.upyun.com/products/file-storage)
+- [uss](https://github.com/beyondstorage/go-service-uss/):
+  [UPYUN Storage Service](https://www.upyun.com/products/file-storage)
 
 **4** alpha services that still under development.
 
-- [onedrive](https://github.com/beyondstorage/go-service-onedrive): [Microsoft OneDrive](https://www.microsoft.com/en-ww/microsoft-365/onedrive/online-cloud-storage)
-- [storj](https://github.com/beyondstorage/go-service-storj): [StorJ](https://www.storj.io/)
-- [webdav](https://github.com/beyondstorage/go-service-webdav): [WebDAV](http://www.webdav.org/)
+- [onedrive](https://github.com/beyondstorage/go-service-onedrive):
+  [Microsoft OneDrive](https://www.microsoft.com/en-ww/microsoft-365/onedrive/online-cloud-storage)
+- [storj](https://github.com/beyondstorage/go-service-storj):
+  [StorJ](https://www.storj.io/)
+- [webdav](https://github.com/beyondstorage/go-service-webdav):
+  [WebDAV](http://www.webdav.org/)
 - [zip](https://github.com/beyondstorage/go-service-zip): zip files
 
-More service ideas could be found at [Service Integration Tracking](https://github.com/beyondstorage/go-storage/issues/536).
+More service ideas could be found at
+[Service Integration Tracking](https://github.com/beyondstorage/go-storage/issues/536).
 
 ### Complete and easily extensible interface
 
 Basic operations
 
 - Metadata: get `Storager` metadata
+
 ```go
 meta := store.Metadata()
 _ := meta.GetWorkDir() // Get object WorkDir
 _, ok := meta.GetWriteSizeMaximum() // Get the maximum size for write operation
 ```
+
 - Read: read `Object` content
+
 ```go
 // Read 2048 byte at the offset 1024 into the io.Writer.
 n, err := store.Read("path", w, pairs.WithOffset(1024), pairs.WithSize(2048))
 ```
+
 - Write: write content into `Object`
+
 ```go
 // Write 2048 byte from io.Reader
 n, err := store.Write("path", r, 2048)
 ```
+
 - Stat: get `Object` metadata or check existences
+
 ```go
 o, err := store.Stat("path")
 if errors.Is(err, services.ErrObjectNotExist) {
@@ -151,11 +181,15 @@ if errors.Is(err, services.ErrObjectNotExist) {
 }
 length, ok := o.GetContentLength() // get the object content length.
 ```
+
 - Delete: delete an `Object`
+
 ```go
 err := store.Delete("path") // Delete the object "path"
 ```
+
 - List: list `Object` in given prefix or dir
+
 ```go
 it, err := store.List("path")
 for {
@@ -170,18 +204,25 @@ for {
 Extended operations
 
 - Copy: copy a `Object` inside storager
+
 ```go
 err := store.(Copier).Copy(src, dst) // Copy an object from src to dst.
 ```
+
 - Move: move a `Object` inside storager
+
 ```go
 err := store.(Mover).Move(src, dst) // Move an object from src to dst.
 ```
+
 - Reach: generate a public accessible url to an `Object`
+
 ```go
 url, err := store.(Reacher).Reach("path") // Generate an url to the object.
 ```
+
 - Dir: Dir `Object` support
+
 ```go
 o, err := store.(Direr).CreateDir("path") // Create a dir object.
 ```
@@ -189,6 +230,7 @@ o, err := store.(Direr).CreateDir("path") // Create a dir object.
 Large file manipulation
 
 - Multipart: allow doing multipart uploads
+
 ```go
 ms := store.(Multiparter)
 
@@ -199,7 +241,9 @@ n, part, err := ms.WriteMultipart(o, r, 1024, 1)
 // Complete a multipart object.
 err := ms.CompleteMultipart(o, []*Part{part})
 ```
+
 - Append: allow appending to an object
+
 ```go
 as := store.(Appender)
 
@@ -210,7 +254,9 @@ n, err := as.WriteAppend(o, r, 1024)
 // Commit an append object.
 err = as.CommitAppend(o)
 ```
+
 - Block: allow combining an object with block ids
+
 ```go
 bs := store.(Blocker)
 
@@ -221,7 +267,9 @@ n, err := bs.WriteBlock(o, r, 1024, "id-abc")
 // Combine block via block ids.
 err := bs.CombineBlock(o, []string{"id-abc"})
 ```
+
 - Page: allow doing random writes
+
 ```go
 ps := store.(Pager)
 
@@ -237,11 +285,15 @@ Global object metadata
 
 - `id`: unique key in service
 - `name`: relative path towards service's work dir
-- `mode`: object mode can be a combination of `read`, `dir`, `part` and [more](https://github.com/beyondstorage/go-storage/blob/master/types/object.go#L11) 
-- `etag`: entity tag as defined in [rfc2616](https://tools.ietf.org/html/rfc2616#section-14.19)
+- `mode`: object mode can be a combination of `read`, `dir`, `part` and
+  [more](https://github.com/beyondstorage/go-storage/blob/master/types/object.go#L11)
+- `etag`: entity tag as defined in
+  [rfc2616](https://tools.ietf.org/html/rfc2616#section-14.19)
 - `content-length`: object's content size.
-- `content-md5`: md5 digest as defined in [rfc2616](https://tools.ietf.org/html/rfc2616#section-14.15)
-- `content-type`: media type as defined in [rfc2616](https://tools.ietf.org/html/rfc2616#section-14.17)
+- `content-md5`: md5 digest as defined in
+  [rfc2616](https://tools.ietf.org/html/rfc2616#section-14.15)
+- `content-type`: media type as defined in
+  [rfc2616](https://tools.ietf.org/html/rfc2616#section-14.17)
 - `last-modified`: object's last updated time.
 
 System object metadata
@@ -259,7 +311,9 @@ _ = om.ServerSideEncryptionCustomerAlgorithm // this object's sse algorithm
 
 ### Strong Typing Everywhere
 
-Self maintained codegen [definitions](https://github.com/beyondstorage/go-storage/tree/master/cmd/definitions) helps to generate all our APIs, pairs and metadata.
+Self maintained codegen
+[definitions](https://github.com/beyondstorage/go-storage/tree/master/cmd/definitions)
+helps to generate all our APIs, pairs and metadata.
 
 Generated pairs which can be used as API optional arguments.
 
@@ -288,10 +342,11 @@ func (o *Object) GetContentMd5() (string, bool) {
 
 ### Server-Side Encrypt
 
-Server-Side Encrypt supports via system pair and system metadata, and we can use [Default Pairs](https://beyondstorage.io/docs/go-storage/pairs#default-pairs) to simplify the job.
+Server-Side Encrypt supports via system pair and system metadata, and we can use
+[Default Pairs](https://beyondstorage.io/docs/go-storage/pairs#default-pairs) to
+simplify the job.
 
 ```go
-
 func NewS3SseC(key []byte) (types.Storager, error) {
     defaultPairs := s3.DefaultStoragePairs{
         Write: []types.Pair{

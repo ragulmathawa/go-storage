@@ -9,9 +9,9 @@ import (
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/suite"
 
-	ps "github.com/beyondstorage/go-storage/v5/pairs"
-	"github.com/beyondstorage/go-storage/v5/pkg/randbytes"
-	"github.com/beyondstorage/go-storage/v5/types"
+	ps "github.com/ragulmathawa/go-storage/pairs"
+	"github.com/ragulmathawa/go-storage/pkg/randbytes"
+	"github.com/ragulmathawa/go-storage/types"
 )
 
 type storageListSuite struct {

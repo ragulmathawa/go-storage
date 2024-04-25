@@ -13,9 +13,9 @@ import (
 
 	"github.com/beyondstorage/go-storage/credential"
 	"github.com/beyondstorage/go-storage/endpoint"
-	ps "github.com/beyondstorage/go-storage/v5/pairs"
-	"github.com/beyondstorage/go-storage/v5/services"
-	typ "github.com/beyondstorage/go-storage/v5/types"
+	ps "github.com/ragulmathawa/go-storage/pairs"
+	"github.com/ragulmathawa/go-storage/services"
+	typ "github.com/ragulmathawa/go-storage/types"
 )
 
 // Service is the azblob config.
@@ -101,10 +101,10 @@ func NewStorager(pairs ...typ.Pair) (typ.Storager, error) {
 // azblob use different URL to represent different sub services.
 // - ServiceURL's          methods perform operations on a storage account.
 //   - ContainerURL's     methods perform operations on an account's container.
-//      - BlockBlobURL's  methods perform operations on a container's block blob.
-//      - AppendBlobURL's methods perform operations on a container's append blob.
-//      - PageBlobURL's   methods perform operations on a container's page blob.
-//      - BlobURL's       methods perform operations on a container's blob regardless of the blob's type.
+//   - BlockBlobURL's  methods perform operations on a container's block blob.
+//   - AppendBlobURL's methods perform operations on a container's append blob.
+//   - PageBlobURL's   methods perform operations on a container's page blob.
+//   - BlobURL's       methods perform operations on a container's blob regardless of the blob's type.
 //
 // Our Service will store a ServiceURL for operation.
 func (f *Factory) newService() (srv *Service, err error) {

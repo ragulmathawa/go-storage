@@ -7,8 +7,8 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/beyondstorage/go-storage/v5/pkg/randbytes"
-	"github.com/beyondstorage/go-storage/v5/types"
+	"github.com/ragulmathawa/go-storage/pkg/randbytes"
+	"github.com/ragulmathawa/go-storage/types"
 )
 
 func setup(b *testing.B, size int64) (store *Storage, path string) {

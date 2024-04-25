@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/beyondstorage/go-storage/v5/tests"
+	"github.com/ragulmathawa/go-storage/tests"
 )
 
 func TestStorager(t *testing.T) {

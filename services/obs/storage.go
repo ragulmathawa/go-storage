@@ -8,10 +8,10 @@ import (
 
 	"github.com/huaweicloud/huaweicloud-sdk-go-obs/obs"
 
-	ps "github.com/beyondstorage/go-storage/v5/pairs"
-	"github.com/beyondstorage/go-storage/v5/pkg/iowrap"
-	"github.com/beyondstorage/go-storage/v5/services"
-	"github.com/beyondstorage/go-storage/v5/types"
+	ps "github.com/ragulmathawa/go-storage/pairs"
+	"github.com/ragulmathawa/go-storage/pkg/iowrap"
+	"github.com/ragulmathawa/go-storage/services"
+	"github.com/ragulmathawa/go-storage/types"
 )
 
 func (s *Storage) create(path string, opt pairStorageCreate) (o *types.Object) {

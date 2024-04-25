@@ -3,7 +3,7 @@ package webdav
 import (
 	"fmt"
 
-	"github.com/beyondstorage/go-storage/v5/types"
+	"github.com/ragulmathawa/go-storage/types"
 )
 
 // Service is the webdav config.

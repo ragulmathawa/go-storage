@@ -1,7 +1,9 @@
 - Author: Xuanwo <github@xuanwo.io>
 - Start Date: 2021-10-27
-- RFC PR: [beyondstorage/go-storage#970](https://github.com/beyondstorage/go-storage/issues/970)
-- Tracking Issue: [beyondstorage/go-storage#975](https://github.com/beyondstorage/go-storage/issues/975)
+- RFC PR:
+  [beyondstorage/go-storage#970](https://github.com/beyondstorage/go-storage/issues/970)
+- Tracking Issue:
+  [beyondstorage/go-storage#975](https://github.com/beyondstorage/go-storage/issues/975)
 
 # GSP-970: Service Factory
 
@@ -9,8 +11,10 @@
 
 The way to init a service or storage is the most important part of the project.
 
-- In [GSP-13: Remove config string](./13-remove-config-string.md), we add pairs support.
-- In [GSP-48: Service Registry](./48-service-registry.md), we implement a service registry.
+- In [GSP-13: Remove config string](./13-remove-config-string.md), we add pairs
+  support.
+- In [GSP-48: Service Registry](./48-service-registry.md), we implement a
+  service registry.
 
 For now, we can init a service in this way:
 
@@ -20,8 +24,8 @@ package main
 import (
    "log"
 
-   "github.com/beyondstorage/go-storage/v5/services"
-   "github.com/beyondstorage/go-storage/v5/types"
+   "github.com/ragulmathawa/go-storage/services"
+   "github.com/ragulmathawa/go-storage/types"
 
    _ "github.com/beyondstorage/go-storage/services/s3/v3"
 )
@@ -37,9 +41,13 @@ func main() {
 
 However, only supporting config strings is not enough.
 
-We need to support other configs. For example, we should support init from a map like `map[string]interface{}`, so developers can marshal and unmarshal them from a config file. Even better, we should support init from a struct, so developers can have strong type support.
+We need to support other configs. For example, we should support init from a map
+like `map[string]interface{}`, so developers can marshal and unmarshal them from
+a config file. Even better, we should support init from a struct, so developers
+can have strong type support.
 
-Besides, the current config string implementation is hard to maintain. We have to maintain a whole pair map between go-storage and services:
+Besides, the current config string implementation is hard to maintain. We have
+to maintain a whole pair map between go-storage and services:
 
 ```go
 var pairMap = map[string]string{"content_md5": "string", "content_type": "string", "context": "context.Context", "continuation_token": "string", "credential": "string", "default_content_type": "string", "default_io_callback": "func([]byte)", "default_service_pairs": "DefaultServicePairs", "default_storage_class": "string", "default_storage_pairs": "DefaultStoragePairs", "disable_100_continue": "bool", "enable_virtual_dir": "bool", "enable_virtual_link": "bool", "endpoint": "string", "excepted_bucket_owner": "string", "expire": "time.Duration", "force_path_style": "bool", "http_client_options": "*httpclient.Options", "interceptor": "Interceptor", "io_callback": "func([]byte)", "list_mode": "ListMode", "location": "string", "multipart_id": "string", "name": "string", "object_mode": "ObjectMode", "offset": "int64", "server_side_encryption": "string", "server_side_encryption_aws_kms_key_id": "string", "server_side_encryption_bucket_key_enabled": "bool", "server_side_encryption_context": "string", "server_side_encryption_customer_algorithm": "string", "server_side_encryption_customer_key": "[]byte", "service_features": "ServiceFeatures", "size": "int64", "storage_class": "string", "storage_features": "StorageFeatures", "use_accelerate": "bool", "use_arn_region": "bool", "work_dir": "string"}
@@ -47,7 +55,8 @@ var pairMap = map[string]string{"content_md5": "string", "content_type": "string
 
 As time goes, the map will become bigger.
 
-How about moving the parsing logic to a factory and implementing them on the service side?
+How about moving the parsing logic to a factory and implementing them on the
+service side?
 
 ## Proposal
 
@@ -110,9 +119,11 @@ type Factory struct {
 }
 ```
 
-This `Factory` struct will implement the go-storage's `Factory` interface. And all existing functions will rewrite into `Factory` calls.
+This `Factory` struct will implement the go-storage's `Factory` interface. And
+all existing functions will rewrite into `Factory` calls.
 
-With this struct, we can unify the initialization logic of service and storage together.
+With this struct, we can unify the initialization logic of service and storage
+together.
 
 ## Rationale
 
@@ -136,7 +147,8 @@ type Config struct {
 }
 ```
 
-They unmarshal yaml into this config and then call `FromMap` method to init the service.
+They unmarshal yaml into this config and then call `FromMap` method to init the
+service.
 
 ```go
 func (c *Config) Init() error {
@@ -150,7 +162,8 @@ func (c *Config) Init() error {
 
 ### How will service factory support init from a struct?
 
-`Factory` itself is marshalable and unmarshalable, so it's possible for developers to unmarshal into this struct directly to init the service.
+`Factory` itself is marshalable and unmarshalable, so it's possible for
+developers to unmarshal into this struct directly to init the service.
 
 For example, we can use `yaml` to unmarshal into this struct:
 

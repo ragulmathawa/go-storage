@@ -3,7 +3,7 @@ package tests
 import (
 	"testing"
 
-	"github.com/beyondstorage/go-storage/v5/tests"
+	"github.com/ragulmathawa/go-storage/tests"
 )
 
 func TestStorage(t *testing.T) {

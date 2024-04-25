@@ -2,7 +2,8 @@
 
 # cos
 
-[COS(Cloud Object Storage)](https://cloud.tencent.com/product/cos) service support for [go-storage](https://github.com/beyondstorage/go-storage).
+[COS(Cloud Object Storage)](https://cloud.tencent.com/product/cos) service
+support for [go-storage](https://github.com/beyondstorage/go-storage).
 
 ## Install
 
@@ -17,7 +18,7 @@ import (
 	"log"
 
 	_ "github.com/beyondstorage/go-storage/services/cos/v3"
-	"github.com/beyondstorage/go-storage/v5/services"
+	"github.com/ragulmathawa/go-storage/services"
 )
 
 func main() {
@@ -31,5 +32,7 @@ func main() {
 }
 ```
 
-- See more examples in [go-storage-example](https://github.com/beyondstorage/go-storage-example).
-- Read [more docs](https://beyondstorage.io/docs/go-storage/services/cos) about go-service-cos.
+- See more examples in
+  [go-storage-example](https://github.com/beyondstorage/go-storage-example).
+- Read [more docs](https://beyondstorage.io/docs/go-storage/services/cos) about
+  go-service-cos.

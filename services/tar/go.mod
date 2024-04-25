@@ -4,11 +4,11 @@ go 1.16
 
 require (
 	github.com/beyondstorage/go-storage/endpoint v1.2.0
-	github.com/beyondstorage/go-storage/v5 v5.0.0
+	github.com/ragulmathawa/go-storage v5.0.0
 	github.com/stretchr/testify v1.9.0
 )
 
 replace (
 	github.com/beyondstorage/go-storage/endpoint => ../../endpoint
-	github.com/beyondstorage/go-storage/v5 => ../../
+	github.com/ragulmathawa/go-storage => ../../
 )

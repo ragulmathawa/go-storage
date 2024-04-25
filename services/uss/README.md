@@ -1,6 +1,7 @@
 # uss
 
-[UPYUN Storage Service](https://www.upyun.com/products/file-storage) support for [go-storage](https://github.com/beyondstorage/go-storage).
+[UPYUN Storage Service](https://www.upyun.com/products/file-storage) support for
+[go-storage](https://github.com/beyondstorage/go-storage).
 
 ## Install
 
@@ -15,7 +16,7 @@ import (
 	"log"
 
 	_ "github.com/beyondstorage/go-storage/services/uss/v3"
-	"github.com/beyondstorage/go-storage/v5/services"
+	"github.com/ragulmathawa/go-storage/services"
 )
 
 func main() {
@@ -29,5 +30,7 @@ func main() {
 }
 ```
 
-- See more examples in [go-storage-example](https://github.com/beyondstorage/go-storage-example).
-- Read [more docs](https://beyondstorage.io/docs/go-storage/services/uss) about go-service-uss.
+- See more examples in
+  [go-storage-example](https://github.com/beyondstorage/go-storage-example).
+- Read [more docs](https://beyondstorage.io/docs/go-storage/services/uss) about
+  go-service-uss.

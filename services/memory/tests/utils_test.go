@@ -3,7 +3,7 @@ package tests
 import (
 	"testing"
 
-	"github.com/beyondstorage/go-storage/v5/types"
+	"github.com/ragulmathawa/go-storage/types"
 
 	"github.com/beyondstorage/go-storage/services/memory"
 )

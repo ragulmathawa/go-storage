@@ -4,7 +4,7 @@ import (
 	"context"
 	"io"
 
-	"github.com/beyondstorage/go-storage/v5/types"
+	"github.com/ragulmathawa/go-storage/types"
 )
 
 func (s *Storage) create(path string, opt pairStorageCreate) (o *types.Object) {

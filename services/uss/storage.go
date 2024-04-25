@@ -8,10 +8,10 @@ import (
 
 	"github.com/upyun/go-sdk/v3/upyun"
 
-	"github.com/beyondstorage/go-storage/v5/pkg/headers"
-	"github.com/beyondstorage/go-storage/v5/pkg/iowrap"
-	"github.com/beyondstorage/go-storage/v5/services"
-	"github.com/beyondstorage/go-storage/v5/types"
+	"github.com/ragulmathawa/go-storage/pkg/headers"
+	"github.com/ragulmathawa/go-storage/pkg/iowrap"
+	"github.com/ragulmathawa/go-storage/services"
+	"github.com/ragulmathawa/go-storage/types"
 )
 
 const (

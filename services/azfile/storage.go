@@ -11,9 +11,9 @@ import (
 
 	"github.com/Azure/azure-storage-file-go/azfile"
 
-	"github.com/beyondstorage/go-storage/v5/pkg/iowrap"
-	"github.com/beyondstorage/go-storage/v5/services"
-	"github.com/beyondstorage/go-storage/v5/types"
+	"github.com/ragulmathawa/go-storage/pkg/iowrap"
+	"github.com/ragulmathawa/go-storage/services"
+	"github.com/ragulmathawa/go-storage/types"
 )
 
 func (s *Storage) create(path string, opt pairStorageCreate) (o *types.Object) {

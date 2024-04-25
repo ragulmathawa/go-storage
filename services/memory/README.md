@@ -2,7 +2,8 @@
 
 # memory
 
-memory service support for [go-storage](https://github.com/beyondstorage/go-storage).
+memory service support for
+[go-storage](https://github.com/beyondstorage/go-storage).
 
 ## Install
 
@@ -17,7 +18,7 @@ import (
 	"log"
 
 	_ "github.com/beyondstorage/go-storage/services/memory"
-	"github.com/beyondstorage/go-storage/v5/services"
+	"github.com/ragulmathawa/go-storage/services"
 )
 
 func main() {
@@ -31,4 +32,5 @@ func main() {
 }
 ```
 
-- See more examples in [go-storage-example](https://github.com/beyondstorage/go-storage-example).
+- See more examples in
+  [go-storage-example](https://github.com/beyondstorage/go-storage-example).

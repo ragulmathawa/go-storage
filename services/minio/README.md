@@ -2,9 +2,10 @@
 
 # minio
 
-[MinIO](https://min.io/) is an open source cloud-native high-performance object storage service. 
-This project will use minio's native SDK to implement [go-storage](https://github.com/beyondstorage/go-storage/), 
-enabling users to manipulate data on minio servers through a unified interface.
+[MinIO](https://min.io/) is an open source cloud-native high-performance object
+storage service. This project will use minio's native SDK to implement
+[go-storage](https://github.com/beyondstorage/go-storage/), enabling users to
+manipulate data on minio servers through a unified interface.
 
 ## Install
 
@@ -19,7 +20,7 @@ import (
 	"log"
 
 	_ "github.com/beyondstorage/go-storage/services/minio"
-	"github.com/beyondstorage/go-storage/v5/services"
+	"github.com/ragulmathawa/go-storage/services"
 )
 
 func main() {
@@ -33,5 +34,7 @@ func main() {
 }
 ```
 
-- See more examples in [go-storage-example](https://github.com/beyondstorage/go-storage-example).
-- Read [more docs](https://beyondstorage.io/docs/go-storage/services/minio) about go-service-minio.
+- See more examples in
+  [go-storage-example](https://github.com/beyondstorage/go-storage-example).
+- Read [more docs](https://beyondstorage.io/docs/go-storage/services/minio)
+  about go-service-minio.

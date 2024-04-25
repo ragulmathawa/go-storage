@@ -11,9 +11,9 @@ import (
 	"github.com/google/uuid"
 	. "github.com/smartystreets/goconvey/convey"
 
-	"github.com/beyondstorage/go-storage/v5/pairs"
-	"github.com/beyondstorage/go-storage/v5/pkg/randbytes"
-	"github.com/beyondstorage/go-storage/v5/types"
+	"github.com/ragulmathawa/go-storage/pairs"
+	"github.com/ragulmathawa/go-storage/pkg/randbytes"
+	"github.com/ragulmathawa/go-storage/types"
 )
 
 func TestMultipartHTTPSigner(t *testing.T, store types.Storager) {

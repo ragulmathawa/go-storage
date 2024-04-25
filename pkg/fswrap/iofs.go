@@ -9,8 +9,8 @@ import (
 	"io/fs"
 	"path"
 
-	"github.com/beyondstorage/go-storage/v5/pairs"
-	"github.com/beyondstorage/go-storage/v5/types"
+	"github.com/ragulmathawa/go-storage/pairs"
+	"github.com/ragulmathawa/go-storage/types"
 )
 
 var (

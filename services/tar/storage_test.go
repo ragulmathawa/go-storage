@@ -10,8 +10,8 @@ import (
 	"github.com/stretchr/testify/assert"
 
 	"github.com/beyondstorage/go-storage/endpoint"
-	"github.com/beyondstorage/go-storage/v5/pairs"
-	"github.com/beyondstorage/go-storage/v5/types"
+	"github.com/ragulmathawa/go-storage/pairs"
+	"github.com/ragulmathawa/go-storage/types"
 )
 
 func setupTest(t *testing.T) (filename string) {

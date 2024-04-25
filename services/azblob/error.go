@@ -1,6 +1,6 @@
 package azblob
 
-import "github.com/beyondstorage/go-storage/v5/services"
+import "github.com/ragulmathawa/go-storage/services"
 
 var (
 	// ErrEncryptionKeyInvalid will be returned while encryption key is invalid.

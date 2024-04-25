@@ -2,8 +2,9 @@ package main
 
 import (
 	"context"
-	"github.com/beyondstorage/go-storage/v5/types"
 	"io"
+
+	"github.com/ragulmathawa/go-storage/types"
 )
 
 type Storage struct {

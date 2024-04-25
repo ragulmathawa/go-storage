@@ -4,7 +4,7 @@ go 1.16
 
 require (
 	github.com/beyondstorage/go-storage/credential v1.0.0
-	github.com/beyondstorage/go-storage/v5 v5.0.0
+	github.com/ragulmathawa/go-storage v5.0.0
 	github.com/dgraph-io/ristretto v0.1.1
 	github.com/google/uuid v1.6.0
 	golang.org/x/oauth2 v0.19.0
@@ -13,5 +13,5 @@ require (
 
 replace (
 	github.com/beyondstorage/go-storage/credential => ../../credential
-	github.com/beyondstorage/go-storage/v5 => ../../
+	github.com/ragulmathawa/go-storage => ../../
 )

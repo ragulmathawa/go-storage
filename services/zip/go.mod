@@ -1,7 +1,7 @@
-module github.com/beyondstorage/go-storage/v5/zip
+module github.com/ragulmathawa/go-storage/zip
 
 go 1.16
 
-require github.com/beyondstorage/go-storage/v5 v5.0.0
+require github.com/ragulmathawa/go-storage v5.0.0
 
-replace github.com/beyondstorage/go-storage/v5 => ../../
+replace github.com/ragulmathawa/go-storage => ../../

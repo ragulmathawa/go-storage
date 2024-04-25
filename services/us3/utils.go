@@ -3,8 +3,8 @@ package us3
 import (
 	"fmt"
 
-	"github.com/beyondstorage/go-storage/v5/services"
-	"github.com/beyondstorage/go-storage/v5/types"
+	"github.com/ragulmathawa/go-storage/services"
+	"github.com/ragulmathawa/go-storage/types"
 )
 
 // Service is the us3 config.

@@ -13,9 +13,9 @@ import (
 
 	"github.com/beyondstorage/go-storage/credential"
 	"github.com/beyondstorage/go-storage/endpoint"
-	ps "github.com/beyondstorage/go-storage/v5/pairs"
-	"github.com/beyondstorage/go-storage/v5/services"
-	typ "github.com/beyondstorage/go-storage/v5/types"
+	ps "github.com/ragulmathawa/go-storage/pairs"
+	"github.com/ragulmathawa/go-storage/services"
+	typ "github.com/ragulmathawa/go-storage/types"
 )
 
 // Service is the kodo config.
